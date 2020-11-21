@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The People's Poll -- Home</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="demostyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="page">
+    <div id="page2">
+        <div id="header">
+              <h1><a href="#">The People's Poll is under construction</a></h1>
+        </div>
+        
+    <div id="menu">
+                <ul>
+                    <li><a href="/index.php">Home</a></li>
+                    <li><a href="/issues.php">Polls</a></li> 
+                    <li><a href="/register.php">Register</a></li>                    
+                    <li><a href="/about.php">About</a></li>
+                </ul>
+    </div>
+        
+    <div id="main">
+        <div id="main2">
+            <div id="main3">
+                <div id="content">
+                    <div class="post">
+                        <h2><a href="#">Are polls and pollsters biased?</a></h2>
+                        
+                  <section>
+                      <br />
+                        <table style="width: 66%">
+                        <tbody>
+                        <tr>
+                            <td style="width: 60%; background-color: white; text-align: center;">
+                            <img src="http://PeoplesPoll.net/Images/SplashLogin.jpg" alt=""/>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                  </section>                          
+                            <div class="entry">
+                                <p>I don't give a hoot who you are, what you are, what your politics are, how rich or poor you are, or where you live. I want to hear from you.</p>
+                                <p>Have you ever been contacted by a pollster? Probably not. I'm 80 and no one has ever contacted me to ask my opinion of anything.</p>
+                                <p>Most "scientific" polls are produced with a "sample" of approximately 1,000 poll respondents and they rarely segment the sample. The results in 2016 were devastating for pollsters. Only one pollster called it for Donald Trump in the days leading up to the election.</p>
+                            </div>          
+                        <p>yada, yada, yada</p>
+                            <section>
+                                <br />
+                                <table style="width: 66%">
+                                <tbody>
+                                <tr>
+                                    <td style="width: 60%; background-color: white; text-align: center;">
+                                    <img src="http://PeoplesPoll.net/Images/polls.jpg" alt=""/>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </section>     
+                            <p>yada, yada, yada</p>
+
+            </div>
+                <!-- end post -->                      
+        </div>
+                <!-- end content -->
+                      <div id="sidebar">
+                            <h2>login</h2>
+
+
+
+    <div class="container">
+        <center>
+    <form class="modal-content animate" action="index.php" method="post">
+        <br />
+        <table style="width: 50%">
+        <tbody>
+        <tr>
+            <td style="width: 95%; background-color: white; text-align: center;">
+                <label for="email"><b>Email</b></label><br />
+                <input type="text" placeholder="Enter Email" name="email" required><br />
+
+                <label for="passswrd"><b>Password</b></label><br />
+                <input type="password" placeholder="Enter Password" name="passwrd" required><br />
+
+                <button type="submit">Login</button><br />
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label><br />
+    </div>
+        <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button><br />
+              <span class="passwrd">Forgot <a href="#">passwrd?</a></span>
+
+        </div>
+    </form>
+    <?php
+    if (isset($_POST['email'])){
+    $email = $_REQUEST['email'];
+    
+    $passwrd = $_REQUEST['passwrd'];
+    $servername = "mysql502.discountasp.net";
+    $email1 = "0140496peoplesp";
+    $password1 = "Sesame#1939";
+    $dbname = "MYSQL5_1014730_peoplespoll"; 
+    $dbconnect = mysqli_connect($servername, $email1, $password1, $dbname);
+    
+    $query = "SELECT * from person where email='$email' and passwrd='$passwrd'";
+    $result = mysqli_query($dbconnect,$query);
+    $rows = mysqli_num_rows($result);
+    
+        if($rows==1){
+        $_SESSION['email'] = $email;
+        echo'successful';
+         }else{
+    echo "<div class='form'>
+<h3>email/passwrd is incorrect.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
+    }
+    }
+?>
+              <br />
+           </td>
+        </tr>
+        </tbody>
+        </table>
+        <br /><br />
+        </center>
+    </div> 
+                            <h2>support the poll</h2>
+                            <div class="boxtxt">
+                                <p>Mauris sollicitudin tincidunt magna vitae semper. Curabitur ut pharetra quam. Integer rhoncus convallis urna vitae mattis. Sed pharetra massa ac metus fermentum et iaculis enim accumsan.</p>
+                            </div>
+                            <h2>this space for rent</h2>
+                            <ul>
+                                <li><a href="#">Suspendisse faucibus purus</a></li>
+                                <li><a href="#">Tincidunt nec accumsan</a></li>
+                                <li><a href="#">Fusce laoreet, ligula et rhoncus</a></li>
+                                <li><a href="#">Adipiscing gravida pulvinar eget</a></li>
+                                <li><a href="#">Cras consectetur commodo</a></li>
+                            </ul>
+                        </div><!-- sidebar -->
+
+                        <div class="clearing">&nbsp;
+                        </div>   
+                </div>
+                <!-- end main3 -->
+            </div>
+            <!-- main2 -->
+        </div>
+        <!-- end main -->
+                    <div id="footer">
+                        <p>Copyright &copy; 2019 -- Parker Shannon -- All Rights reserved</p>
+                        <p><a href="#">Privacy Policy</a></p>
+                    </div>
+                    <!-- end page3 -->
+    </div>
+            <!-- end page2 -->
+</div>
+        <!-- end page -->
+</body>
+</html>

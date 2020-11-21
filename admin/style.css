@@ -1,0 +1,39 @@
+button.btn.btn-success.ct{
+margin-top: 19px;
+}
+
+.head{
+background: dodgerblue;
+color: white;
+font-family: -webkit-body;
+}
+
+.head h2{
+margin-lift: 35px;
+}
+
+.col-md-2.admin{
+background: dodgerblue;
+border-top: 1px solid white;
+
+}
+
+.col-md-2.admin ul{
+margin: 0px;
+padding: 0px;
+
+}
+
+.col-md-2.admin ul li{
+list-style: none;
+padding: 17px;
+boder-bottom: 1px solid white;
+
+}
+
+.col-md-2.admin ul li a{
+color: white;
+text-transform: uppercase;
+font-size: 15px;
+text-decoration:none;
+}
